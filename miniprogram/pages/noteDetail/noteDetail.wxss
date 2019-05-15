@@ -1,0 +1,10 @@
+/* miniprogram/pages/noteDetail/noteDetail.wxss */
+.container1{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-flow: wrap row;
+    background:rgba(128, 128, 128, 0);
+    border-radius: 10px;
+    margin-top: 30rpx;
+}

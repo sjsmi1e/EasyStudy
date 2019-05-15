@@ -1,0 +1,23 @@
+/* miniprogram/pages/noteword/noteword.wxss *//* miniprogram/pages/noteimage/noteimage.wxss */
+.line-css {
+height:1px;
+width: 90%;
+ background: rgba(128, 128, 128, 0.842); 
+box-shadow: 500rpx;
+margin: 30rpx 20rpx;
+}
+.container1{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-flow: wrap row;
+    background:rgba(128, 128, 128, 0);
+    border-radius: 10px;
+    margin-top: 30rpx;
+}
+image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 0%;
+  margin-left: 5%;
+}

@@ -1,0 +1,32 @@
+<!--miniprogram/pages/noteWordAndImage/noteWordAndImage.wxml-->
+<!--miniprogram/pages/noteimage/noteimage.wxml-->
+<view>
+  <input placeholder="   输入标题" bindinput="listenerPhoneInput" auto-focus>
+  </input>
+</view>
+
+
+
+<view class='container'>
+  <view class='line-css'></view>
+  <view>
+    <textarea placeholder="  输入内容 " bindinput="listenercontent" auto-focus style="margin:30rpx">
+    </textarea>
+  </view>
+  <view class='container1'>
+    <image src='/images/index/add.png' bindtap='chooseImage' wx:if="{{images.length < 6}}"></image>
+    <text style='margin-top:50rpx;color:gray'>最多保存6张</text>
+  </view>
+  <view class="question-images" class='container1'>
+    <block wx:for="{{images}}" wx:key="*this">
+      <view class="q-image-wrap">
+        <!-- 图片缩略图  -->
+        <image src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        <!-- 移除图片的按钮  -->
+        <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+      </view>
+    </block>
+  </view>
+
+  <button style='width:80%;top:10%; background-color:#81D2C7; margin-top:30rpx' bindtap='publish'>保存</button>
+</view>

@@ -1,0 +1,30 @@
+<!--miniprogram/pages/plantable/plantable.wxml-->
+<view class='container'>
+  <view class='container2' wx:for='{{planData}}' wx:key='planData'>
+    <view>
+      <text style='color:grey'>{{item.time}}</text>
+    </view>
+    <view class='line-css'></view>
+    <view>
+      <text style='color:grey'>{{item.content}}</text>
+    </view>
+    <view style='width:100%;text-align:right'>
+      <!-- <button style='width:100%;height:30rpx;font-size:20rpx' bindtap='delPlan' data-id='{{item._id}}'>删除</button> -->
+      <text bindtap='delPlan' data-id='{{item._id}}' style='margin-right:10rpx;color:red'>删除</text>
+    </view>
+  </view>
+  <view class='line-css' ></view>
+  <view style='width:70%'>
+    <button bindtap='modalinput'>新建计划</button>
+  </view>
+
+  <modal id="modal" hidden="{{hiddenmodalput}}" title="新增计划" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <!-- <input type='text' placeholder="时间" auto-focus bindinput='getTime'/> -->
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <input disabled='true' value='{{time}}' placeholder='选择时间' />
+    </picker>
+    <input type='text' placeholder="内容" auto-focus bindinput='getCont' />
+  </modal>
+
+
+</view>

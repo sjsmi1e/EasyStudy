@@ -1,0 +1,25 @@
+<!--miniprogram/pages/plan/plan.wxml-->
+<view class="container">
+  <view class='container1' style=''>
+    <view style='position: relative;width:90%'>
+      <image class="userinfo-avatar" src='{{avatarUrl}}'></image>
+      <text style='position: absolute;left: 35%;top:0%;'>今日未完成计划：<text style='font-size:40px;color:red'>{{number}}</text></text>
+    </view>
+  </view>
+  
+    <view class="container2">
+      <button style='width:100%;top:10%' bindtap='plan' data-year='1'>今日计划</button>
+    </view>
+  
+    <view class="container2">
+      <button style='width:100%;top:10%' bindtap='plan' data-year='2'>周计划</button>
+    </view>
+
+    <view class="container2">
+      <button style='width:100%;top:10%' bindtap='plan' data-year='3'>月计划</button>
+    </view>
+
+  <view class="container2">
+      <button style='width:100%;top:10%' bindtap='plan' data-year='4'>年计划</button>
+  </view>
+</view>

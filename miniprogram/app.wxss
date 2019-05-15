@@ -5,3 +5,6 @@
   align-items: center;
   box-sizing: border-box;
 } 
+button{
+  background: linear-gradient(to bottom right, rgba(128, 128, 128, 0.062) , rgba(0, 195, 255, 0.253));
+}

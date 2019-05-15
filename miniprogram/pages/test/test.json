@@ -1,0 +1,11 @@
+{
+  "usingComponents": {},
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "图片",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}

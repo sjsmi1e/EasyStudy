@@ -1,0 +1,13 @@
+<!--miniprogram/pages/noteword/noteword.wxml-->
+<view>
+  <input placeholder="    输入标题" bindinput="listenerPhoneInput" auto-focus>
+  </input>
+</view>
+
+<view class="line-css"></view>
+<view>
+  <textarea placeholder="  输入内容 " bindinput="listenercontent" auto-focus style="margin:30rpx">
+  </textarea>
+</view>
+
+<button style='width:80%;top:10%; background-color:#81D2C7; margin-top:30rpx' bindtap='publish'>保存</button>

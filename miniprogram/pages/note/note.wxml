@@ -1,0 +1,48 @@
+<!--miniprogram/pages/note/note.wxml-->
+<view class='container'>
+  <view>
+    <button bindtap='writeNote'>新建</button>
+  </view>
+
+  <view class='line-css'></view>
+
+
+  <view class='container1'>
+    <view>
+      <text>全部</text>
+      <view class='line-css' style='width:100%'></view>
+    </view>
+  </view>
+
+  <view style='width:90%'>
+      <view style='margin: 30rpx 0; background:rgb(255, 255, 255);border-radius: 10px;box-shadow: 0 0 5px gray ;' class='flex-wrp-row item' wx:for='{{notes}}' wx:for-index="index" wx:key='week'>
+        <view class='item-left flex-wrp-row' bindtap='getDetail' data-id='{{item._id}}'>
+          <image src='{{types[item.type]}}'></image>
+          <view class='container'>
+            <text>{{item.head}}</text>
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+        <view class='item-right flex-wrp-row'>
+          <image src='/images/index/delete.png' class='image1' bindtap='delNote' data-id='{{item._id}}' data-index='{{index}}'></image>
+          <!-- <button class='.button1' open-type='share' data-id='{{item._id}}' ><image src='../../images/index/分享.png' class='image1' ></image></button> -->
+        </view>
+      </view>
+  </view>
+
+  <view class='container1'>
+    <view class='line-css' style='width:30%;'></view>
+    <view>
+      <text style='color:gray;font-size:30rpx'>已经到底了</text>
+    </view>
+    <view class='line-css' style='width:30%'></view>
+  </view>
+</view>
+
+<modal no-cancel="true" hidden="{{hiddenmodalput}}" title="请选择类型" confirm-text="X" bindconfirm="confirm">
+  <image bindtap='toNoteImage' src='/images/index/pic.png' class='image1' style=' margin-right: 13%;'></image>
+  <image bindtap='toNoteVoice' src='/images/index/voice2.png' class='image1' style=' margin-right: 13%;'></image>
+  <image bindtap='toNoteWord' src='/images/index/addword.png' class='image1' style=' margin-right: 13%;'></image>
+  <image bindtap='toNoteImageAndWord' src='/images/index/picword.png' class='image1'></image>
+  <view style=" word-break: break-all">由于微信小程序云存储有bug\n或者本人学习不精\n关于语音播放以及图片显示存在问题\n但是上传功能不影响，可以继续使用。以后会逐渐修复，敬请期待</view>
+</modal>

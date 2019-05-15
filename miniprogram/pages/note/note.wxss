@@ -1,0 +1,74 @@
+/* miniprogram/pages/note/note.wxss */
+
+button {
+  width: 500rpx;
+  height: 80rpx;
+  /* background-color:beige; */
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.192);
+  background-color: #81d2c7;
+  margin-top: 30rpx;
+}
+.container1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  background: rgba(128, 128, 128, 0);
+  border-radius: 10px;
+  margin-top: 30rpx;
+}
+
+.line-css {
+  height: 1px;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.842);
+  margin: 30rpx 0;
+  box-shadow: 500rpx;
+}
+
+image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 0%;
+}
+
+.image1 {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 0%;
+}
+
+.scroll {
+  height: 1170rpx;
+  z-index: 100;
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrp-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  padding: 20rpx;
+  position: relative;
+}
+
+.item-left {
+  flex: 1; /* 重要 */
+  align-items: center;
+}
+
+.item-right {
+  position: relative;
+  align-items: center;
+}
+
+.button1 {
+  width: 80rpx;
+  height: 80rpx;
+}

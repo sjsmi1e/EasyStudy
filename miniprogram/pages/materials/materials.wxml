@@ -1,0 +1,9 @@
+<!--miniprogram/pages/materials/materials.wxml-->
+<!-- <text>miniprogram/pages/materials/materials.wxml</text> -->
+<view class='container'>
+  <!-- <button bindtap='getId'>获取id</button> -->
+
+  <view class='dir'>
+    <text>这是一个文件夹</text>
+  </view>
+</view>

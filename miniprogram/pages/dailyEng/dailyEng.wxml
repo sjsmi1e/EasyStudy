@@ -1,0 +1,62 @@
+<!-- 顶部菜单栏 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">每日英语</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">诗词赏析</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- 英语 -->
+  <swiper-item>
+    <view class='container'>
+      <view style='margin:0;position: absolute;width:100%;height:650rpx'>
+        <image src='{{image}}' style='width:100%;height:100%'></image>
+      </view>
+      <view class='container2' style='position: relative;top:500rpx'>
+        <view style='color:black;  text-align: center;'>今天,你看英语了吗？</view>
+        <view style='text-align: center;'>
+          <text style='font-size: 20rpx;color:#81D2C7'>{{time}}</text>
+        </view>
+        <view class='line-css' style='margin-top:0%;'></view>
+        <view style='display:flex;flex-flow: wrap row;'>
+          <view style='width:90%'>{{engword}}</view>
+          <view style='width:5%'>
+            <image src='/images/index/laba.png' bindtap='play' style='width:30rpx;height:30rpx'></image>
+          </view>
+          <view style='width:90%'>{{chnword}}</view>
+        </view>
+
+        <view class='line-css' style='margin-top:0%;'></view>
+        <view> {{myword}}</view>
+
+      </view>
+      <view style='width:40%;position: relative;top:550rpx'>
+        <button open-type="share">转发</button>
+      </view>
+
+    </view>
+  </swiper-item>
+  <!-- 诗词 -->
+  <swiper-item>
+  
+    <view style='background:url("https://wx3.sinaimg.cn/mw690/006Al9Egly1g2v8hgmpkcj30m815j41u.jpg");'>
+      <view class='title'>{{poem.origin.title}}</view>
+      <view class='author'>{{poem.origin.dynasty}}:{{poem.origin.author}}</view>
+      <view class='matchTags'>
+        <text>[</text>
+        <text wx:for='{{poem.matchTags}}'> {{item}} </text>
+        <text>]</text>
+      </view>
+      <scroll-view scroll-y='true' style='height:650rpx'>
+        <view wx:for='{{poem.origin.content}}' class='content'>
+          <view>{{item}}</view>
+        </view>
+      </scroll-view>
+
+      <view class='content'>
+        <view>经典名句</view>
+        <view class='line-css' style='margin-left:10%;width:80%'></view>
+        <view style='margin-bottom:5%'>{{poem.content}}</view>
+      </view>
+    </view>
+  </swiper-item>
+
+</swiper>

@@ -1,0 +1,40 @@
+<!--miniprogram/pages/translate/translate.wxml-->
+<!-- <text>miniprogram/pages/translate/translate.wxml</text> -->
+<view class='container'>
+  <view class="container2">
+  <image src='/images/index/picture.png' bindtap='chooseImage'></image>
+    <!--这个是输入框-->
+    <input class="input" value='{{words}}'  type="text" placeholder="请输入需要翻译的文字" placeholder-style="color: gray" bindinput="listenerPhoneInput" />
+    <image src='/images/index/voice.png' bindtouchstart="chooseSound" bindtouchend="soundEnd"></image>
+  </view>
+
+  <!-- <view class="inputView">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view>
+    <text>To</text>
+  </view> -->
+  <view class="container2">
+    <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+      <view class="picker">
+        当前选择：{{array2[index2]}}
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <view class='container2'>
+      <button style='width:100%' bindtap='subReq' >提交</button>
+    </view>
+  </view>
+
+  <view class='container2'>
+    <textarea  placeholder="译文" value='{{res}}'>
+    </textarea>
+  </view>
+
+</view>

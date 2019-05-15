@@ -1,0 +1,55 @@
+<!--miniprogram/pages/course/course.wxml-->
+
+<view class="top">
+  <view wx:key='week' wx:for="{{['一','二','三','四','五','六','日']}}" class="top-text">周{{item}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="scroll" style='background:url("https://wx2.sinaimg.cn/mw690/d6ffd804ly1g2tze1yqzsj20b40gomyg.jpg");'>
+  <view style="height:1200rpx;width:730rpx;display:flex;">
+
+    <view style="background-color:#193B54;opacity:0.6;">
+      <view wx:key='data' wx:for="{{[1,2,3,4,5,6,7,8]}}" class="left" style='color:black;'>
+        {{item}}
+      </view>
+    </view>
+
+    <view wx:key='subject' wx:for="{{[1,2,3,4,5,6,7,8]}}">
+      <view style="width:100%;margin-top:{{(index+1)*150}}rpx;  position: absolute;border-bottom:2rpx solid {{index==3?'red':'lightgray'}};">
+      </view>
+    </view>
+
+    <view style='flex-direction: column;'>
+      <view wx:for="{{resCourse}}" wx:key='line' wx:for-index="idx">
+        <view style="color:black;" class="course">
+          <view wx:for="{{item.message}}" wx:key='row' wx:for-index="idy" wx:for-item="item2" style='margin:0 13rpx'>
+            <view class="container2" wx:if='{{item2!=null}}' style='width: 75rpx'>
+              <!-- <view bindtap='delCourse' data-x='{{idx}}' data-y='{{idy}}' style='text-align:center;font-size: 12rpx;'>删除</view> -->
+              <view bindtap='modalinput' bindlongtap='delCourse' data-x='{{idx}}' data-y='{{idy}}'><text style='font-size: 20rpx;width: 100%'>{{item2.course}}\n{{item2.addr}}\n{{item2.time}}</text></view>
+              
+            </view>
+            <view wx:if='{{item2==null}}'>
+              <image bindtap='modalinput' data-x='{{idx}}' data-y='{{idy}}' src='/images/index/插入.png' style='width: 75rpx;height: 80rpx' />
+            </view>
+
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+
+    <!--课表-->
+  </view>
+</scroll-view>
+
+<modal id="modal" hidden="{{hiddenmodalput}}" title="新增计划" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <!-- <input type='text' placeholder="时间" auto-focus bindinput='getTime' /> -->
+  <picker mode="time" bindchange="bindTimeChange">
+    <input value='{{addCon.time}}' disabled='true' placeholder='选择时间' />
+  </picker>
+  <input type='text' placeholder="课程名" auto-focus bindinput='getCour' />
+  <input type='text' placeholder="地点" auto-focus bindinput='getAddr' />
+  <input type='text' placeholder="老师" auto-focus bindinput='getTeach' />
+</modal>

@@ -1,18 +1,27 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/first/first",
+    "pages/test/test",
+    "pages/noteimage/noteimage",
+    "pages/materials/materials",
+    "pages/translate/translate",
+    "pages/authorize/authorize",
+    "pages/plan/plan",
+    "pages/plantable/plantable",
+    "pages/course/course",
+    "pages/note/note",
+    "pages/noteVoice/noteVoice",
+    "pages/noteword/noteword",
+    "pages/noteDetail/noteDetail",
+    "pages/noteWordAndImage/noteWordAndImage",
+    "pages/dailyEng/dailyEng"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "易学",
+    "navigationBarBackgroundColor": "#81D2C7",
+    "navigationBarTitleText": "易学研",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

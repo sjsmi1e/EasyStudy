@@ -1,0 +1,13 @@
+<!--miniprogram/pages/noteVoice/noteVoice.wxml-->
+<view>
+  <input placeholder="   输入标题" bindinput="listenerPhoneInput" auto-focus>
+  </input>
+</view>
+<view class='line-css'></view>
+<view class='container1'>
+    <image src='/images/index/voice2.png' bindtouchstart="chooseSound" bindtouchend="soundEnd" style='margin-left:10%'></image>
+    <text style='color:blue ;font-size:30rpx;margin-top:25rpx'>点击试听
+    </text>
+     <image src='/images/index/laba.png' bindtap='playVoice'></image>
+  <button style='width:80%;top:10%; background-color:#81D2C7; margin-top:30rpx' bindtap='publish'>保存</button>
+</view>

@@ -1,0 +1,88 @@
+<view class="container">
+  <view class='container1'>
+    <view style='position: relative;width:33%'>
+      <text style='position: absolute;font-size:30rpx;left: 10%;top: 35%;color:white'>{{time}}</text>
+    </view>
+    <view style='position: relative;width:33%'>
+      <image class="userinfo-avatar" src='{{avatarUrl}}'></image>
+    </view>
+    <view style='position: relative;width:33%'>
+      <button disabled='{{but}}' style='position: absolute;left: 35%;top: 35%;' bindtap='SignIn' wx:if='{{daily}}'>打卡</button>
+      <text style='position: absolute;left: 50%;top: 35%;font-size:30rpx;color:white' wx:if='{{!daily}}'>您已经打卡<text style='color:blue;font-size:35rpx;'>{{totalDays}}</text>天</text>
+    </view>
+    <view class='userinfo-nickname ' style='margin:0 0 25rpx 0; '>
+      <text color='#4cff81'>{{nick}}</text>
+    </view>
+  </view>
+
+  <view class='container2'>
+    <view style='width:100%;text-align:center;color:blue'>学习工具</view>
+    <view class='line-css'></view>
+    <navigator url='../translate/translate'>
+      <view class="container">
+        <image class="fun-avatar" style='' src='/images/index/line.png'></image>
+        <text class='text1'>翻译</text>
+      </view>
+    </navigator>
+    <navigator url='../dailyEng/dailyEng?daka={{daily}}'>
+      <view class="container">
+        <image class="fun-avatar" style='' src='/images/index/upload.png'></image>
+        <text class='text1'>一诗一句</text>
+      </view>
+    </navigator>
+    <view class="container" bindtap='aboutUs'>
+      <image class="fun-avatar" style='' src='/images/index/comingsoon.png'></image>
+      <text class='text1'>关于我们</text>
+    </view>
+  </view>
+  <view class='container2'>
+    <view style='width:100%;text-align:center;color:blue'>辅助功能</view>
+    <view class='line-css'></view>
+    <navigator url='../course/course'>
+      <view class="container">
+        <image class="fun-avatar" style='' src='/images/index/course.png'></image>
+        <text class='text1'>我的课表</text>
+      </view>
+    </navigator>
+    <navigator url='../plan/plan'>
+      <view class="container">
+        <image class="fun-avatar" style='' src='/images/index/plan.png'></image>
+        <text class='text1'>我的计划</text>
+      </view>
+    </navigator>
+  <navigator url='../note/note'>
+    <view class="container">
+      <image class="fun-avatar" style='' src='/images/index/note.png'></image>
+      <text class='text1'>备忘录</text>
+    </view>
+    </navigator>
+
+  </view>
+
+  <!-- <text>{{avatarUrl}}</text> -->
+  <view class="container2">
+
+    <view class='text1' style='color:blue;width:100% ;text-align:center'>通知</view>
+    <view class='line-css' style='margin-top:0%;'></view>
+    <view class="container" style='height:300rpx'>
+      <text class='text1' style='color:black;margin:0 80rpx' wx:if='{{courseData.time==null&&noteData.time==null}}'>无</text>
+      <text class='text1' style='color:black' wx:if='{{noteData.time!=null}}'>您接下来的计划：{{noteData.time}}</text>
+      <text class='text1' style='color:red' wx:if='{{noteData.content!=null}}'>{{noteData.content}}</text>
+      <text class='text1' style='color:black)' wx:if='{{courseData.time!=null}}'>您接下来的课程：{{courseData.time}}</text>
+      <text class='text1' style='color:red' wx:if='{{courseData.course!=null}}'>{{courseData.course}}</text>
+      <text class='text1' style='color:black' wx:if='{{ourseData.addr!=null}}'>{{courseData.addr}}</text>
+
+    </view>
+  </view>
+</view>
+
+
+
+<modal no-cancel="true" hidden="{{hiddenmodalput}}" title="关于我们" confirm-text="确定" bindconfirm="confirm">
+  <view>说明</view>
+  <view>本小程序是我们根据大学平时学习忙而忘记一些琐事，所以开发这款小程序旨在帮助大家更好管理生活与学习方面问题。</view>
+  <view>由于本小程序还在开发阶段，所以还有或多或少的功能有待完善。大家有说明意见或者建议望积极反馈。</view>
+  <view>联系方式</view>
+  <view>电话：15891706580</view>
+  <view>邮箱：1043110319@qq.com</view>
+</modal>

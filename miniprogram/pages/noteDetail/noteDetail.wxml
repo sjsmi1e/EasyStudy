@@ -1,0 +1,28 @@
+<!--miniprogram/pages/noteDetail/noteDetail.wxml-->
+<view class='container'>
+  <view>
+    <text>{{head}}</text>
+  </view>
+  <view>
+    <text style='color:gray;font-size:30rpx'>发布于：{{time}}</text>
+  </view>
+
+  <view wx:if='{{type==3||type==4}}' style='margin:30rpx;width:80%'>
+    <view style=" word-break: break-all">{{content}}</view>
+  </view>
+
+  <view wx:if='{{type==2}}' style='height: 80rpx;width:80rpx;'>
+    <image style='height: 100%;width:100%;' src='/images/index/voice2.png' bindtap='playVoice'></image>
+  </view>
+
+  <view wx:if='{{type==1||type==4}}'>
+    <view wx:for='{{images}}' style='margin: 30rpx 0; background:rgb(255, 255, 255);border-radius: 10px;box-shadow: 0 0 5px gray ;'>
+      <!-- <image src='{{item.tempFileURL}}'></image> -->
+      <image src='{{item}}'></image>
+    </view>
+  </view>
+
+
+    <button style='width:30%;top:10%; background-color:#81D2C7; margin-top:30rpx' open-type='share'>转发</button>
+
+</view>

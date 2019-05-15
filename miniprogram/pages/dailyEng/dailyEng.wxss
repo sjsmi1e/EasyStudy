@@ -1,0 +1,91 @@
+/* miniprogram/pages/dailyEng/dailyEng.wxss */
+
+.as {
+  position: relative;
+}
+
+.container2 {
+  height: 90%;
+  width: 95%;
+  /* background-color:beige; */
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 5px gray;
+  margin: 30rpx;
+}
+
+view {
+  font-size: 30rpx;
+  font-weight: lighter;
+  white-space: pre-wrap;
+  color: gray;
+  margin-left: 10rpx;
+}
+
+.line-css {
+  height: 1px;
+  width: 100%;
+  background: gray;
+  margin: 30rpx 0;
+  box-shadow: 500rpx;
+}
+
+/* miniprogram/pages/test/test.wxss */
+
+/**index.wxss**/
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #777;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+.matchTags {
+  display: flex;
+  flex-flow: wrap row;
+  height: 80rpx;
+  justify-content: center;
+  text-align: center
+}
+.content{
+  /* background-color:beige; */
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px gray;
+  margin: 30rpx;
+}
+.title{
+  color: black
+}
+.author{
+  font-size: 25rpx
+}

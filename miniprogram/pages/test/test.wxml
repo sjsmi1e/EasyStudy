@@ -1,0 +1,11 @@
+<!--miniprogram/pages/test/test.wxml-->
+<button type="primary" size="mini" bindtap="chooseImage">添加图片</button>
+<image src="{{item}}" mode="aspectFill" data-idx="{{index}}"></image>
+<button bindtap='uploadImage'>点击上传</button>
+<!-- <button type='primary' bindtap='getAccess_token'>获取getAccess_token</button>
+
+<button type='primary' bindtap='addDataBase'>数据库增加数据</button> -->
+<button bindtap='gettime'>获取时间</button>
+<button bindtap='getImage'>获得图片</button>
+
+<image src='{{image}}'></image>
